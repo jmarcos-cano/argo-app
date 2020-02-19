@@ -14,7 +14,7 @@ spec:
         app: flasky
     spec:
       containers:
-      - image: mcano/argo-app:v1.0
+      - image: mcano/argo-app:v1.2
         name: flasky
         ports:
         - containerPort: 5000

@@ -7,8 +7,11 @@ FROM python:alpine
 
 # If you prefer miniconda:
 #FROM continuumio/miniconda3
+ARG VERSION=v0.0
 
 LABEL Name=argo-app Version=0.0.1
+ENV VERSION=${VERSION}
+
 EXPOSE 5000
 
 WORKDIR /app

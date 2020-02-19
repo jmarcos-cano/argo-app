@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flasky
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: flasky
+  template:
+    metadata:
+      labels:
+        app: flasky
+    spec:
+      containers:
+      - image: mcano/argo-app:v1.0
+        name: flasky
+        ports:
+        - containerPort: 5000

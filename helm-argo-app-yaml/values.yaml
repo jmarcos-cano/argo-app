@@ -5,3 +5,6 @@ spec:
   source:
     repoURL: 'https://github.com/jmarcos-cano/argo-app.git'
     targetRevision: HEAD
+
+app:
+    name: flasky

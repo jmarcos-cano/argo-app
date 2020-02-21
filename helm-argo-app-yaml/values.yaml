@@ -1,7 +1,7 @@
 spec:
   destination:
     namespace: flasky
-    server: 'https://35.225.167.14'
+    server: 'https://kubernetes.default.svc'
   source:
     repoURL: 'https://github.com/jmarcos-cano/argo-app.git'
     targetRevision: HEAD

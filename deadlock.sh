@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# https://github.com/argoproj/argo-cd/issues/1329
 kubectl get apps -A
 
 

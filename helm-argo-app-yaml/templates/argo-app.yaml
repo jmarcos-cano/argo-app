@@ -1,7 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ .Values.app.name }}
+  name: helm-argo-app-yaml
+  namespace: argocd
   finalizers: []
 spec:
   destination:
@@ -9,10 +10,6 @@ spec:
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    path: {{ .Values.app.name }}
+    path: helm-argo-app-yaml
     repoURL: {{ .Values.spec.source.repoURL }}
     targetRevision: {{ .Values.spec.source.targetRevision }}
-    directory:
-        recurse: true
-        jsonnet: {}
-

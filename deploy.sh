@@ -16,12 +16,12 @@ FOLDER=$(echo $FOLDER |tr -d "/" )
 : ${REPO:="https://github.com/jmarcos-cano/argo-app.git"}
 
 
-echo "argocd app create ${APP_NAME} \
-    --dest-namespace default \
-    --dest-server ${DEST_SERVER} \
-    --repo ${REPO} \
-    --path ${APP_NAME}"
-exit
+# echo "argocd app create ${APP_NAME} \
+#     --dest-namespace default \
+#     --dest-server ${DEST_SERVER} \
+#     --repo ${REPO} \
+#     --path ${APP_NAME}"
+# exit
 
 
 argocd app create ${APP_NAME} \

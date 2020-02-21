@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: flasky
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: default
+    server: 'https://35.225.167.14'
+  source:
+    path: k8
+    repoURL: 'https://github.com/jmarcos-cano/argo-app.git'
+    targetRevision: HEAD
+  project: default
+  syncPolicy: "manual"

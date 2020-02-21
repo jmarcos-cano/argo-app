@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: myconfigmap
   labels:
-    name: flasky
+    app: flasky
 data:
   foo: bar

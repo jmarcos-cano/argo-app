@@ -1,6 +1,6 @@
 spec:
   destination:
-    namespace: default
+    namespace: flasky
     server: 'https://35.225.167.14'
   source:
     repoURL: 'https://github.com/jmarcos-cano/argo-app.git'

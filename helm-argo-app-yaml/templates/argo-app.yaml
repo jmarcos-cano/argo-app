@@ -1,15 +1,15 @@
-# apiVersion: argoproj.io/v1alpha1
-# kind: Application
-# metadata:
-#   name: helm-argo-app-yaml
-#   namespace: argocd
-#   finalizers: []
-# spec:
-#   destination:
-#     namespace: default
-#     server: {{ .Values.spec.destination.server }}
-#   project: default
-#   source:
-#     path: helm-argo-app-yaml
-#     repoURL: {{ .Values.spec.source.repoURL }}
-#     targetRevision: {{ .Values.spec.source.targetRevision }}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: helm-argo-app-yaml
+  namespace: argocd
+  finalizers: []
+spec:
+  destination:
+    namespace: default
+    server: {{ .Values.spec.destination.server }}
+  project: default
+  source:
+    path: helm-argo-app-yaml
+    repoURL: {{ .Values.spec.source.repoURL }}
+    targetRevision: {{ .Values.spec.source.targetRevision }}

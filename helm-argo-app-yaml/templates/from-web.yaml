@@ -1,16 +1,16 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: helm-app
-spec:
-  destination:
-    namespace: flasky
-    server: 'https://35.225.167.14'
-  source:
-    path: helm-argo-app-yaml
-    repoURL: 'https://github.com/jmarcos-cano/argo-app.git'
-    targetRevision: HEAD
-    helm:
-      valueFiles:
-        - values.yaml
-  project: default
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: helm-app
+# spec:
+#   destination:
+#     namespace: flasky
+#     server: 'https://35.225.167.14'
+#   source:
+#     path: helm-argo-app-yaml
+#     repoURL: 'https://github.com/jmarcos-cano/argo-app.git'
+#     targetRevision: HEAD
+#     helm:
+#       valueFiles:
+#         - values.yaml
+#   project: default
